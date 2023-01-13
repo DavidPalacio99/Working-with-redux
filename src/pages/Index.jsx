@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useDispatch } from "react-redux";
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 
 import { setUser } from "../reducers/user/userSlice";
@@ -9,7 +9,7 @@ export const Index = () => {
   const emailField = useRef(null);
   const passwordField = useRef(null);
 
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const dispatch = useDispatch();
 
@@ -33,7 +33,7 @@ export const Index = () => {
               token: Date.now(),
             })
           );
-          // navigate("/home");
+          navigate("/home");
         }
       }
     });
